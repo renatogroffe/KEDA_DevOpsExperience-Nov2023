@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: webapp
+spec:
+  selector:
+    matchLabels:
+      app: webapp
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: webapp
+    spec:
+      containers:
+        - name: apicontagem
+          image: renatogroffe/apicontagem-dotnet7-simulacaohealthcheck:2
+          env:
+          - name: MensagemVariavel
+            value: Testes com Metrics API Scaler
+          ports:
+          - containerPort: 80
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: webapp-service
+spec:
+  selector:
+    app: webapp
+  ports:
+    - port: 80
+  type: LoadBalancer
