@@ -9,7 +9,7 @@ Tipo do evento: **Online**
 
 Ferramenta de transmissão: **Zoom**
 
-Tecnologias utilizadas: **Kubernetes, KEDA, Azure Kubernetes Service (AKS), .NET 8, ASP.NET Core**
+Tecnologias utilizadas: **Kubernetes, KEDA, Metrics API (KEDA Scaler), Azure Kubernetes Service (AKS), Linux, k9s, .NET 8, ASP.NET Core**
 
 Número de participantes: **285 pessoas (pico de audiência ao longo da live)**
 
